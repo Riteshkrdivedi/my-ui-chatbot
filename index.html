@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="responses.js"></script> -->
+</head>
+
+<body class="h-screen  bg-[#EDDDB8]  flex flex-col">
+    <!-- color chnage start -->
+    <nav
+        class=" bg-[#CEAC5B] text-white p-4 flex justify-between items-center w-[98vw] rounded-lg mx-auto mt-2 shadow-md">
+        <h1 class="text-lg font-semibold">Bahai Faith FAQ</h1>
+    </nav>
+
+    <div class="flex flex-1 overflow-hidden">
+        <div id="sidebar"
+            class="bg-[#eed497] md:w-1/4 w-full p-4 md:h-[88vh] md:my-auto md:rounded-lg shadow-md hidden md:block">
+            <h2 class="font-bold mb-4 w-[80%]">Questions</h2>
+            <ul id="question-list" class="space-y-2 "></ul>
+        </div>
+
+        <div class="flex-1 flex flex-col p-4">
+            <div id="chat-box" class="flex-1 overflow-y-auto p-4 bg-[#FFFAF1] shadow-md rounded-lg mb-4">
+                <div id="chat" class="space-y-2"></div>
+            </div>
+            <button class="bg-[#CEAC5B] text-white  md:block hidden rounded-lg px-4 py-2 ">Please
+                select a
+                question from sidebar</button>
+            <button id="mobile-toggle" class="bg-[#CEAC5B] text-white md:hidden block rounded-lg px-4 py-2 ">List of
+                Questions</button>
+        </div>
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>

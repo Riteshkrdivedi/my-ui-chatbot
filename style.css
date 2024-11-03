@@ -1,0 +1,96 @@
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.question-item {
+  padding: 10px 15px;
+  /* Padding for questions */
+  border: 1px solid #e2e8f0;
+  /* Light border */
+  border-radius: 8px;
+  /* Rounded corners */
+  transition: background-color 0.3s;
+  /* background-color: #e3dbc9; */
+}
+
+.question-item:hover {
+  background-color: #edddb8;
+  /* Light gray background on hover */
+}
+
+.subquestion-item {
+  padding: 8px 10px;
+  /* Padding for subquestions */
+  border: 1px solid #e2e8f0;
+  /* Light border */
+  border-radius: 6px;
+  /* Rounded corners */
+  margin-top: 5px;
+  /* Margin between subquestions */
+  transition: background-color 0.3s;
+  background-color: #edddb8;
+}
+
+.subquestion-item:hover {
+  background-color: #e0c075e4;
+  /* Light gray background on hover */
+}
+/* Target the chat container scrollbar */
+#chat-box::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+/* Scrollbar track */
+#chat-box::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Track background color */
+  border-radius: 4px; /* Rounded corners */
+}
+
+/* Scrollbar thumb */
+#chat-box::-webkit-scrollbar-thumb {
+  background-color: #97b2d5; /* Thumb color */
+  border-radius: 24px; /* Rounded corners for the thumb */
+  border: 2px solid #f0f0f0; /* Adds padding to the thumb */
+}
+
+/* Hover effect on scrollbar thumb */
+#chat-box::-webkit-scrollbar-thumb:hover {
+  background-color: #3e8ae0; /* Darker color on hover */
+}
+
+/* For Firefox */
+#chat-box {
+  scrollbar-width: thin;
+  scrollbar-color: #65a8ff #f0f0f0; /* Thumb color and track color */
+}
+/* CSS for scrolling within subquestions when there's a large number of items */
+.subquestions {
+  max-height: 80vh; /* Adjust this height as needed */
+  overflow-y: auto; /* Enables vertical scrolling */
+  padding-right: 0.5rem; /* For a bit of space from the scrollbar */
+}
+/* Set a maximum height for the question list container to enable scrolling */
+#sidebar {
+  max-height: 88vh; /* Adjust as needed */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Optional styling for scrollbar */
+.subquestions::-webkit-scrollbar,
+#sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.subquestions::-webkit-scrollbar-thumb,
+#sidebar::-webkit-scrollbar-thumb {
+  background-color: #eed497; /* Scrollbar color */
+  border-radius: 4px;
+}
+/* Sticky style for the selected question */
+.sticky-question {
+  position: sticky;
+  top: 0;
+  background-color: white; /* Adjust as needed to blend with your design */
+  z-index: 10; /* Ensure it stays above other elements */
+  padding-top: 0.5rem; /* Adjust to create space as desired */
+}
